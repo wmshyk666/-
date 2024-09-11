@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/fanImageView"
+        android:layout_width="88dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/decivenameTextView"
+        android:layout_width="88dp"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:textSize="25sp"/>
+
+
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/red"
+        android:text="关机" />
+
+    <Button
+        android:id="@+id/smallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="280dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:backgroundTint="@color/light_green"
+        android:text="弱档" />
+    <Button
+        android:id="@+id/middleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="140dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:backgroundTint="@color/dark_green"
+        android:text="中档" />
+
+    <Button
+        android:id="@+id/bigButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="0dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:backgroundTint="#008080"
+        android:text="全档" />
+</RelativeLayout>

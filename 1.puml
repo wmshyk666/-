@@ -1,0 +1,48 @@
+@startuml
+class Device {
+- int deviceId
+- String deviceName
+- String deviceType
+- int isOnline
+- String location
+- Timestamp lastOnline
++ int getDeviceId()
++ String getDeviceName()
++ String getDeviceType()
++ int getIsOnline()
++ String getLocation()
++ Timestamp getLastOnline()
+}
+
+
+class HomeFragment {
+- ListView deviceListView
+- List<Device> deviceList
+- DeviceListAdapter adapter
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+}
+
+
+class HomeFragment$FetchDataTask {
+- int maxAttempts
+- int currentAttempt
+- int connectionTimeout
+- String serverUrl
+# List<Device> doInBackground(String)
+- List<Device> fetchDataFromServer()
+# void onPostExecute(List<Device>)
+}
+
+
+class HomeFragment$DeviceListAdapter {
++ View getView(int,View,ViewGroup)
+}
+
+
+
+Fragment <|-- HomeFragment
+HomeFragment +.. HomeFragment$FetchDataTask
+AsyncTask <|-- HomeFragment$FetchDataTask
+HomeFragment +.. HomeFragment$DeviceListAdapter
+ArrayAdapter <|-- HomeFragment$DeviceListAdapter
+@enduml

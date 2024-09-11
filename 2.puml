@@ -1,0 +1,30 @@
+@startuml
+class HistoryFragment {
+- LineChart lineChart
+- int sensorId
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onDestroyView()
+- void setupLineChart()
+}
+
+
+class HistoryFragment$FetchSensorHistoryTask {
+}
+class SensorHistory {
+- int id
+- int sensorId
+- String value
+- Timestamp timestamp
++ int getId()
++ int getSensorId()
++ String getValue()
++ Timestamp getTimestamp()
+}
+
+
+
+
+Fragment <|-- HistoryFragment
+HistoryFragment +.. HistoryFragment$FetchSensorHistoryTask
+AsyncTask <|-- HistoryFragment$FetchSensorHistoryTask
+@enduml
